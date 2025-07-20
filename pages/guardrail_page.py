@@ -5,7 +5,7 @@ import re
 
 # Page layout
 st.set_page_config(page_title="Guardrail Validator", page_icon="🔍")
-st.title("🔍 Prompt Guardrail Validator")
+st.title("Guardrail Validator")
 
 # Sidebar for validator and model selection
 st.sidebar.header("Configuration")
