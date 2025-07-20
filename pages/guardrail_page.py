@@ -26,7 +26,7 @@ model = st.sidebar.selectbox(
 st.info(f"**Validator:** `{validator}`  |  **LLM:** `{model}`")
 
 # Hugging Face token
-hf_token = st.sidebar.text_input("Enter your Hugging Face Token (HF_TOKEN):")
+hf_token = st.sidebar.text_input("Enter your HF Token (HF_TOKEN):")
 
 if hf_token:
     from huggingface_hub import login
@@ -69,4 +69,4 @@ if hf_token:
             st.session_state['model'] = model
             st.switch_page("pages/result_page.py")
 else:
-    st.warning("Please enter your Hugging Face API token to start.")
+    st.warning("Please enter your HF API token to start.")
