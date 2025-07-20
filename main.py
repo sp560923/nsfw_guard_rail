@@ -3,8 +3,12 @@ import streamlit as st
 #from pages.guardrail_page import guardrail_ui
 
 st.set_page_config(page_title="AI Prompt Validator", page_icon="🛡️", layout="centered")
+#Load and inject HTML from external file
+with open("index.html","r",encoding="utf-8") as file;
+custom_html = file.read()
+st.markdown(custom_html,unsafe_allow_html=True)
 
-st.title("Guardrails AI")
+#st.title("Guardrails AI")
 st.markdown("""
 What is Guardrails?
 Guardrails is a Python framework that helps build reliable AI applications by performing two key functions:
