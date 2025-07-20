@@ -4,11 +4,14 @@ import streamlit as st
 
 st.set_page_config(page_title="AI Prompt Validator", page_icon="🛡️", layout="centered")
 
-st.title("🛡️ AI Prompt Guardrail Interface")
+st.title("Guardrails AI")
 st.markdown("""
-Welcome to the **AI Prompt Guardrail** app! 🎯  
-This tool helps validate user inputs before sending them to a language model (LLM).
+What is Guardrails?
+Guardrails is a Python framework that helps build reliable AI applications by performing two key functions:
+Guardrails runs Input/Output Guards in your application that detect, quantify and mitigate the presence of specific types of risks. To look at the full suite of risks, check out Guardrails Hub.
+Guardrails help you generate structured data from LLMs. 
 
+This tool helps validate user inputs before sending them to a language model (LLM).
 Please choose a validator and a model from the sidebar to begin.
 """)
 
