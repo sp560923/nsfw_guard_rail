@@ -5,7 +5,7 @@ import streamlit as st
 st.set_page_config(page_title="AI Prompt Validator", page_icon="🛡️", layout="centered")
 #Load and inject HTML from external file
 with open("index.html","r",encoding="utf-8") as file:
-custom_html = file.read()
+ custom_html = file.read()
 st.markdown(custom_html,unsafe_allow_html=True)
 
 #st.title("Guardrails AI")
