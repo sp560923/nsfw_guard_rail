@@ -1,6 +1,6 @@
 # main.py
 import streamlit as st
-from pages.guardrail_page import guardrail_ui
+#from pages.guardrail_page import guardrail_ui
 
 st.set_page_config(page_title="AI Prompt Validator", page_icon="🛡️", layout="centered")
 
