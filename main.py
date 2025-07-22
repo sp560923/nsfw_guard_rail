@@ -5,7 +5,7 @@ import streamlit as st
 st.set_page_config(page_title="Guardrail Validator", page_icon="🛡️", layout="wide")
 
 # --- Handle HTML-triggered redirect ---
-query_params = st.experimental_get_query_params()
+query_params = st.query_params
 if "proceed" in query_params:
     st.switch_page("pages/guardrail_page.py")
 
