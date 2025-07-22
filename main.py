@@ -13,3 +13,9 @@ if "proceed" in query_params:
 with open("index.html", "r", encoding="utf-8") as file:
     custom_html = file.read()
 st.markdown(custom_html, unsafe_allow_html=True)
+# --- Insert a real Streamlit button below the HTML card ---
+with st.container():
+    col1, col2, col3 = st.columns([2, 3, 2])  # Center the button
+    with col2:
+        if st.button("🚀 Proceed to Validation"):
+            st.switch_page("pages/guardrail_page.py")
