@@ -27,3 +27,7 @@ st.markdown("""
 
     This tool helps validate user inputs before sending them to a language model.
 """)
+# --- Landing Button ---
+st.markdown("<br><br>", unsafe_allow_html=True)
+if st.button("🚀 Proceed to Validation"):
+    st.switch_page("pages/guardrail_page.py")
