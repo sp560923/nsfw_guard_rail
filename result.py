@@ -1,4 +1,4 @@
-# File: result_page.py
+# File: result.py
 import streamlit as st
 
 def run():
