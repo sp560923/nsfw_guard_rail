@@ -65,12 +65,12 @@ def run():
                 st.session_state['validator'] = validator
                 st.session_state['model'] = model
                 # Adapt the line below if you refactor result_page too
-                # st.switch_page("pages/result_page.py")  ← remove if not using multipage
+                 st.switch_page("pages/result_page.py")  ← remove if not using multipage
             except ValueError as e:
                 st.session_state['validation_result'] = str(e)
                 st.session_state['input_text'] = text_input
                 st.session_state['validator'] = validator
                 st.session_state['model'] = model
-                # st.switch_page("pages/result_page.py")
+                 st.switch_page("pages/result_page.py")
     else:
         st.warning("Please enter your HF API token in the sidebar to start.")
