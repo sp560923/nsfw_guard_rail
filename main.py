@@ -1,6 +1,6 @@
 # main.py
 import streamlit as st
-import guardrail_page  # Make sure guardrail_page.py is in the same directory
+import guardrail  # Make sure guardrail_page.py is in the same directory
 
 # --- Page Configuration ---
 st.set_page_config(page_title="Guardrail Validator", page_icon="🛡️", layout="wide")
@@ -17,7 +17,7 @@ if "proceed" in query_params:
 
 # --- Navigation Control ---
 if st.session_state["show_guardrail"]:
-    guardrail_page.run()  # Call function defined inside guardrail_page.py
+    guardrail.run()  # Call function defined inside guardrail_page.py
     st.stop()
 
 # --- Load and Inject Custom HTML ---
