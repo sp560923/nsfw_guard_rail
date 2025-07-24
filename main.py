@@ -7,7 +7,7 @@ st.set_page_config(page_title="Guardrail Validator", page_icon="🛡️", layout
 # --- Handle HTML-triggered redirect ---
 query_params = st.query_params
 if "proceed" in query_params:
-    st.switch_page("pages/guardrail_page.py")
+    st.switch_page("guardrail_page.py")
 
 # --- Load and Inject Custom HTML ---
 with open("index.html", "r", encoding="utf-8") as file:
@@ -18,4 +18,4 @@ with st.container():
     col1, col2, col3 = st.columns([2, 3, 2])  # Center the button
     with col2:
         if st.button("🚀 Proceed to Validation"):
-            st.switch_page("pages/guardrail_page.py")
+            st.switch_page("guardrail_page.py")
