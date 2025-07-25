@@ -12,7 +12,4 @@ with st.container():
         if st.button("🚀 Proceed to Validation"):
             st.experimental_set_query_params(page="guardrail")
 
-# Optional: display logic based on query params
-params = st.experimental_get_query_params()
-if params.get("page") == ["guardrail"]:
-    st.info("Please click 'guardrail page' in the sidebar to continue.")
+
