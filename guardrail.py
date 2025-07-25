@@ -62,7 +62,8 @@ def run():
                 st.session_state['validator'] = validator
                 st.session_state['model'] = model
                 #st.switch_page("result.py")  # ✅ Only switch, no display here               
-                st.session_state.page = 'result'  # Navigation
+                #st.session_state.page = 'result'  # Navigation
+                st.session_state.page = 'result'
                 st.rerun()
 
             except Exception as e:
@@ -71,7 +72,8 @@ def run():
                 st.session_state['error'] = str(e)
                 st.session_state['input_text'] = text_input
                 #st.switch_page("result.py") 
-                st.session_state.page = 'result'  # Navigation
+                #st.session_state.page = 'result'  # Navigation
+                st.session_state.page = 'result'
                 st.rerun()
 
 
