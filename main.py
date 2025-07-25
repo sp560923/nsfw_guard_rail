@@ -1,22 +1,18 @@
 import streamlit as st
-from streamlit_extras.switch_page_button import switch_page
 
-# --- Page Configuration ---
 st.set_page_config(page_title="Guardrail Validator", page_icon="🛡️", layout="wide")
 
-# --- Handle HTML-triggered redirect ---
-query_params = st.query_params
-if "proceed" in query_params:
-    switch_page("guardrail_page")  # No 'pages/' or '.py'
-
-# --- Load and Inject Custom HTML ---
 with open("index.html", "r", encoding="utf-8") as file:
     custom_html = file.read()
 st.markdown(custom_html, unsafe_allow_html=True)
 
-# --- Insert a real Streamlit button below the HTML card ---
 with st.container():
-    col1, col2, col3 = st.columns([2, 3, 2])  # Center the button
+    col1, col2, col3 = st.columns([2, 3, 2])
     with col2:
         if st.button("🚀 Proceed to Validation"):
-            switch_page("guardrail_page")  # Correct usage
+            st.experimental_set_query_params(page="guardrail")
+
+# Optional: display logic based on query params
+params = st.experimental_get_query_params()
+if params.get("page") == ["guardrail"]:
+    st.info("Please click 'guardrail page' in the sidebar to continue.")
