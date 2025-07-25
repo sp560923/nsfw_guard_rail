@@ -3,4 +3,6 @@ transformers
 huggingface_hub
 torch
 streamlit-option-menu
+streamlit-extras
+
 
