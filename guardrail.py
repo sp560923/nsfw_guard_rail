@@ -62,13 +62,16 @@ def run():
                 st.session_state['validator'] = validator
                 st.session_state['model'] = model
                 #st.switch_page("result.py")  # ✅ Only switch, no display here               
-
+                st.session_state.page = 'result'  # Navigation
+                st.experimental_rerun()
             except Exception as e:
                 st.session_state['validation_results'] = []
                 st.session_state['flagged'] = []
                 st.session_state['error'] = str(e)
                 st.session_state['input_text'] = text_input
-                #st.switch_page("result.py")                
+                #st.switch_page("result.py") 
+                st.session_state.page = 'result'  # Navigation
+                st.experimental_rerun()
 
     else:
         st.warning("Please enter your HF API token in the sidebar to start.")
