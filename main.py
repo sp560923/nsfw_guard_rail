@@ -10,6 +10,6 @@ with st.container():
     col1, col2, col3 = st.columns([2, 3, 2])
     with col2:
         if st.button("🚀 Proceed to Validation"):
-            st.experimental_set_query_params(page="guardrail")
+           
 
 
