@@ -56,6 +56,15 @@ def run():
         if st.button("🚀 Validate Prompt") and text_input:
             try:
                 results, flagged = guard_nsfw(text_input)
+
+                st.write("🧪 Debug: Running guard_nsfw")
+                results, flagged = guard_nsfw(text_input)
+                st.write("🔍 Results:", results)
+                st.write("🚩 Flagged:", flagged)
+
+
+
+                
                 st.session_state['validation_results'] = results
                 st.session_state['flagged'] = flagged
                 st.session_state['input_text'] = text_input
